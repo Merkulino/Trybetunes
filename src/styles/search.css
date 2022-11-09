@@ -1,0 +1,19 @@
+.page-search {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: baseline;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.cardsAlbumContainer {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  width: 100%;
+}

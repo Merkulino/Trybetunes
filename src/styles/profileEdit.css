@@ -1,0 +1,17 @@
+.editProfileForm {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.editProfileForm > label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.editProfileForm > label > input {
+  color: black;
+}

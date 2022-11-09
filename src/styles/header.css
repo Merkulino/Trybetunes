@@ -1,0 +1,63 @@
+.header {
+  align-items: center;
+  border: 2pt solid tan;
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.startElement {
+  align-items: center;
+  display: flex;
+  justify-content: stretch;
+  width: 30%;
+}
+
+.backPage {
+  cursor: pointer;
+  flex-basis: 10%;
+  width: 50px;
+}
+
+.searchContent {
+  flex-basis: 90%;
+}
+
+.labelHeader > input {
+  background-color: white;
+  border-radius: 15pt;
+  color: black;
+  font-size: 16px;
+  height: 35px;
+  padding-left: 10px;
+  width: 100%;
+}
+
+.profile {
+  align-items: center;
+  border: 2pt solid var(--green-spotify);
+  border-radius: 5pt;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+  height: 20px;
+  padding: 5px 10px 5px;
+  width: fit-content;
+}
+
+.profile * {
+  cursor: pointer;
+}
+
+ul {
+  display: inline;
+}

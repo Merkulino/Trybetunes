@@ -1,0 +1,38 @@
+.cardAlbum {
+  background-color: #232323;
+  border-radius: 5pt;
+  cursor: pointer;
+  height: 270px;
+  padding: 18px;
+  transition: all 300ms ease-in-out;
+  width: 180px;
+}
+
+.cardAlbum:hover {
+  background-color: #565656;
+  transition: all 300ms ease-in-out;
+}
+
+.coverImgCard {
+  border-radius: 3pt;
+  box-shadow: black 2px 10px 15px;
+  height: 180px;
+  margin: 0 auto;
+  width: 180px;
+}
+
+.albumCardTitle {
+  font-weight: 600;
+}
+
+.moreInfoCard {
+  color: rgba(255, 255, 255, 0.607);
+  display: flex;
+  font-size: 15px;
+  font-weight: 300;
+  justify-content: space-between;
+}
+
+.moreInfoCard > p {
+  margin: 0;
+}

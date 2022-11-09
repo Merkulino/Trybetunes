@@ -1,0 +1,8 @@
+.musicTrack {
+  align-items: center;
+  border: 1pt solid var(--green-spotify);
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 30px;
+  padding: 10px;
+}
