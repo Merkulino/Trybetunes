@@ -32,15 +32,23 @@ a {
   text-align: start;
 }
 
-li > a {
-  color: #ffffffa1;
+.ulSidebar > li > a, i {
+  color: #ffffffa1;;
+}
+
+.ulSidebar > li > a {
   font-size: 14px;
   font-weight: 800;
   text-decoration: none;
   transition: all 300ms ease;
+  padding-left: 20px;
 }
 
-li > a:hover {
+.ulSidebar > li > a:hover {
   color: white;
   transition: all 300ms ease;
+}
+
+.ulSidebar > li > a:focus-within {
+  color: white;
 }

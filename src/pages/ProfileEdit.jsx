@@ -24,7 +24,7 @@ export default class ProfileEdit extends Component {
         image,
         description,
         loading: false,
-      }, this.validadeForm);
+      });
     });
   }
 

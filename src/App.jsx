@@ -4,7 +4,6 @@ import './App.css';
 import Sidebar from './components/Sidebar'
 import MainContent from './components/MainContent';
 
-
 class App extends React.Component {
   render() {
     return (
