@@ -5,6 +5,7 @@ import Loading from '../components/Loading';
 import MusicCard from '../components/MusicCard';
 import getMusics from '../services/musicsAPI';
 import { addSong, getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
+import '../styles/album.css';
 
 const INICIAL_STATE = {
   albumMusics: [],
@@ -84,40 +85,48 @@ export default class Album extends Component {
     const year = (albumMusics[0].releaseDate).substring(0, FOUR);
     return (
       <div>
-        <div className="headerAlbum">
-          <img src={ imgUrl } alt="" />
-          <p className="collectionType">{ albumMusics[0].collectionType }</p>
-          <p
-            className="albumTitle"
-            data-testid="album-name"
-          >
-            { albumMusics[0].collectionName }
-          </p>
-          <div>
-            <p
-              className="artistAlbum"
-              data-testid="artist-name"
-            >
-              { albumMusics[0].artistName }
-            </p>
-            <p className="realeseYearAlbum">{ year }</p>
-            <p className="musicLengthAlbum">{`Musicas: ${albumMusics[0].trackCount}`}</p>
+        <div className="headerMusics">
+          <div className="coverAlbum">
+            <img src={ imgUrl } alt="cover album" />
+          </div>
+          <div className="divInfoAlbum">
+            <div className="divAlbumTitle">
+              <h2 className="collectionType">{ albumMusics[0].collectionType }</h2>
+              <h1
+                className="albumTitle"
+                data-testid="album-name"
+              >
+                { albumMusics[0].collectionName }
+              </h1>
+            </div>
+            <div className="divMoreInfoAlbum">
+              <p
+                className="artistAlbum"
+                data-testid="artist-name"
+              >
+                { albumMusics[0].artistName }
+              </p>
+              <p className="realeseYearAlbum">{ year }</p>
+              <p className="musicLengthAlbum">{`Musicas: ${albumMusics[0].trackCount}`}</p>
+            </div>
           </div>
         </div>
-        {
-          albumMusics.filter((music) => music.trackName)
-            .map((music) => {
-              const isCheck = favoriteTracks
-                .some((favSongs) => favSongs.trackId === music.trackId);
-              return (<MusicCard
-                musicInfo={ music }
-                key={ music.trackId }
-                isChecked={ isCheck }
-                onHadleCheck={ this.onHadleCheck }
-              />
-              );
-            })
-        }
+        <div className="tracksContent">
+          {
+            albumMusics.filter((music) => music.trackName)
+              .map((music) => {
+                const isCheck = favoriteTracks
+                  .some((favSongs) => favSongs.trackId === music.trackId);
+                return (<MusicCard
+                  musicInfo={ music }
+                  key={ music.trackId }
+                  isChecked={ isCheck }
+                  onHadleCheck={ this.onHadleCheck }
+                />
+                );
+              })
+          }
+        </div>
       </div>
     );
   };

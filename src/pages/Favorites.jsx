@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Loading from '../components/Loading';
 import MusicCard from '../components/MusicCard';
 import { getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
+import coverImg from '../imgs/liked-songs-300.png';
 
 export default class Favorites extends Component {
   state = {
@@ -38,20 +39,39 @@ export default class Favorites extends Component {
     return (
       <div data-testid="page-favorites">
         <Header />
-        {
-          favoriteTracks.filter((music) => music.trackName)
-            .map((music) => {
-              const isCheck = favoriteTracks
-                .some((favSongs) => favSongs.trackId === music.trackId);
-              return (<MusicCard
-                musicInfo={ music }
-                key={ music.trackId }
-                isChecked={ isCheck }
-                onHadleCheck={ this.onHadleCheck }
-              />
-              );
-            })
-        }
+        <div className="headerMusics">
+          <div className="coverAlbum">
+            <img src={ coverImg } alt="cover album" />
+          </div>
+          <div className="divInfoAlbum">
+            <div className="divAlbumTitle">
+              <h2 className="collectionType">Playlist</h2>
+              <h1 className="albumTitle"> Músicas Curtidas </h1>
+            </div>
+            <div className="divMoreInfoAlbum">
+              <p className="artistAlbum">
+                Melqui Brito
+              </p>
+              <p>Musica: 999</p>
+            </div>
+          </div>
+        </div>
+        <div className="tracksContent">
+          {
+            favoriteTracks.filter((music) => music.trackName)
+              .map((music) => {
+                const isCheck = favoriteTracks
+                  .some((favSongs) => favSongs.trackId === music.trackId);
+                return (<MusicCard
+                  musicInfo={ music }
+                  key={ music.trackId }
+                  isChecked={ isCheck }
+                  onHadleCheck={ this.onHadleCheck }
+                />
+                );
+              })
+          }
+        </div>
         { loadingComponent && <Loading />}
       </div>
     );

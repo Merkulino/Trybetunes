@@ -29,7 +29,8 @@ export default class Search extends Component {
       [name]: value,
     }, this.searchBtnListener());
   };
-
+  
+  // Refatorar essa requisição durante a pesquisa, tá bem ruim
   searchBtnListener = () => {
     const { search } = this.state;
     const currentSearch = search;
@@ -74,7 +75,7 @@ export default class Search extends Component {
           searchBtnListener={ this.searchBtnListener }
         />
         <div data-testid="page-search" className="page-search">
-          <form>
+          {/* <form>
             <label htmlFor="search-artist">
               <input
                 type="text"
@@ -93,7 +94,7 @@ export default class Search extends Component {
                 Pesquisar
               </button>
             </label>
-          </form>
+          </form> */}
           <div className="cardsAlbumContainer">
             {loading ? <Loading /> : <div />}
 

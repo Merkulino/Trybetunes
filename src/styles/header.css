@@ -6,13 +6,6 @@
   margin: auto 30px;
 }
 
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-
 .startElement {
   align-items: center;
   display: flex;
