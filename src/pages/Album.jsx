@@ -15,6 +15,13 @@ const INICIAL_STATE = {
   favoriteTracks: [],
 };
 
+const RESTORE_STAGE_WITHOUT_HASMUSC = {
+  albumMusics: [],
+  checkFavTrack: false,
+  currentFavTrack: '',
+  favoriteTracks: [],
+};
+
 export default class Album extends Component {
   state = INICIAL_STATE;
 
@@ -64,15 +71,15 @@ export default class Album extends Component {
     if (!checked) {
       const { favoriteTracks } = this.state;
       const trackSelected = favoriteTracks.find((track) => track.trackId === Number(id));
-      this.setState({ hasMusics: false }, () => {
+      // this.setState({ hasMusics: false }, () => {
         removeSong(trackSelected).then(() => {
           this.setState(() => {
             const newFavList = favoriteTracks
               .filter((track) => track.trackId !== Number(id));
-            this.setState({ favoriteTracks: newFavList, hasMusics: true });
+            this.setState({ favoriteTracks: newFavList });
           });
         });
-      });
+      // });
     }
   };
 
