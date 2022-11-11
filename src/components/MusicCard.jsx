@@ -9,25 +9,34 @@ export default class MusicCard extends Component {
         artistName, trackName, trackId }, onHadleCheck, isChecked } = this.props;
     return (
       <div className="musicTrack">
-        <p>{trackNumber}</p>
-        <p>{trackName}</p>
-        <p>{artistName}</p>
-        <audio data-testid="audio-component" src={ previewUrl } controls>
-          <track kind="captions" />
-          O seu navegador não suporta o elemento
-          <code>audio</code>
-        </audio>
-        <label htmlFor={ trackId }>
-          Favorita
-          <input
-            data-testid={ `checkbox-music-${trackId}` }
-            type="checkbox"
-            name="checkFavTrack"
-            checked={ isChecked }
-            onChange={ onHadleCheck }
-            id={ trackId }
-          />
-        </label>
+        <div className="startElementsTrack">
+          <p>{trackNumber}</p>
+          <div className="trackInfo">
+            <p>{trackName}</p>
+            <p className="artistNameTrack">{artistName}</p>
+          </div>
+        </div>
+        <div className="endElementsTrack">
+          <audio data-testid="audio-component" src={ previewUrl } controls>
+            <track kind="captions" />
+            O seu navegador não suporta o elemento
+            <code>audio</code>
+          </audio>
+          <label htmlFor={ trackId }>
+            { isChecked ? <i class="fa-solid fa-heart"></i>
+            : <i class="fa-regular fa-heart"></i>
+            }
+            <input
+              hidden
+              data-testid={ `checkbox-music-${trackId}` }
+              type="checkbox"
+              name="checkFavTrack"
+              checked={ isChecked }
+              onChange={ onHadleCheck }
+              id={ trackId }
+            />
+          </label>
+        </div>
       </div>
     );
   }

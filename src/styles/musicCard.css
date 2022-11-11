@@ -1,8 +1,54 @@
 .musicTrack {
   align-items: center;
-  border: 1pt solid var(--green-spotify);
+  border-radius: 5pt;
   display: flex;
   justify-content: space-between;
-  margin: 0px 30px 5px;
-  padding: 10px;
+  margin: 0px 30px;
+  padding: 5px 20px;
+  height: 56px;
+  transition: all 300ms ease-in-out;
 }
+
+.musicTrack:hover {
+  background-color: #565656;
+  transition: all 300ms ease-in-out;
+}
+
+.startElementsTrack {
+  display: flex;
+  gap: 20px;
+}
+
+.trackInfo {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: start;
+  justify-content: space-between;
+  padding: 3px 0;
+}
+
+.trackInfo > p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.artistNameTrack {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.685);
+}
+
+.endElementsTrack {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+audio {
+  height: 50px;
+  width: 280px;
+}
+
+.endElementsTrack > label {
+  cursor: pointer !important;
+}
+
