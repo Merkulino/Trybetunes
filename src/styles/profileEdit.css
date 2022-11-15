@@ -3,6 +3,9 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 80%;
+  margin: auto;
+  align-items: center;
 }
 
 .editProfileForm > label {
@@ -13,5 +16,5 @@
 }
 
 .editProfileForm > label > input {
-  color: black;
+  color: white;
 }

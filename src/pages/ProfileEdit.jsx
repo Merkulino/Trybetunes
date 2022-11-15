@@ -59,8 +59,9 @@ export default class ProfileEdit extends Component {
     return (
       <form className="editProfileForm">
         <label htmlFor="input-name">
-          Insara o nome
+          Nome de usuario
           <input
+            className="inputLogin"
             data-testid="edit-input-name"
             type="text"
             id="input-name"
@@ -70,8 +71,9 @@ export default class ProfileEdit extends Component {
           />
         </label>
         <label htmlFor="input-email">
-          O emqila
+          Email
           <input
+            className="inputLogin"
             data-testid="edit-input-email"
             type="text"
             id="input-email"
@@ -81,10 +83,11 @@ export default class ProfileEdit extends Component {
           />
         </label>
         <label htmlFor="input-description">
-          a descrição
+          Sobre
           <input
+            className="inputLogin"
             data-testid="edit-input-description"
-            type="text"
+            type="textarea"
             id="input-description"
             name="description"
             value={ description }
@@ -92,8 +95,9 @@ export default class ProfileEdit extends Component {
           />
         </label>
         <label htmlFor="input-image">
-          a imagem
+          Imagem
           <input
+            className="inputLogin"
             data-testid="edit-input-image"
             type="text"
             id="input-image"
@@ -104,12 +108,13 @@ export default class ProfileEdit extends Component {
           />
         </label>
         <button
+          className="spotifyBtn"
           data-testid="edit-button-save"
           type="button"
           onClick={ this.saveUserData }
           disabled={ isFormInvalid }
         >
-          Salvar
+          Salvar perfil
         </button>
       </form>);
   };

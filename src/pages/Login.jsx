@@ -35,33 +35,42 @@ export default class Login extends Component {
     });
   };
 
+  renderForm = () => {
+    const { name, isInvalid } = this.state;
+    return (
+      <form className="loginForm">
+        <label htmlFor="name-input">
+          <p> Login </p>
+          <input
+            className="inputLogin"
+            value={name}
+            onChange={this.onHandleChange}
+            data-testid="login-name-input"
+            type="text"
+            id="name-input"
+            placeholder="username"
+            name="name"
+          />
+        </label>
+        <button
+          className="spotifyBtn spotifyFont"
+          data-testid="login-submit-button"
+          type="button"
+          disabled={isInvalid}
+          onClick={this.authUser}
+        >
+          Entrar
+        </button>
+      </form>
+    )
+  }
+
   render() {
-    const { name, isInvalid, loading, loggedIn } = this.state;
+    const { loading, loggedIn } = this.state;
     return (
       <div data-testid="page-login" className="page-login">
-        {loading ? <Loading /> : <div /> }
-        <form className="loginForm">
-          <label htmlFor="name-input">
-            <p> Login </p>
-            <input
-              value={ name }
-              onChange={ this.onHandleChange }
-              data-testid="login-name-input"
-              type="text"
-              id="name-input"
-              placeholder="username"
-              name="name"
-            />
-          </label>
-          <button
-            data-testid="login-submit-button"
-            type="button"
-            disabled={ isInvalid }
-            onClick={ this.authUser }
-          >
-            Entrar
-          </button>
-        </form>
+        {loading ? <Loading />
+          : this.renderForm()}
         {
           loggedIn && <Redirect to="/search" />
         }

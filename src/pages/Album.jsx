@@ -15,13 +15,6 @@ const INICIAL_STATE = {
   favoriteTracks: [],
 };
 
-const RESTORE_STAGE_WITHOUT_HASMUSC = {
-  albumMusics: [],
-  checkFavTrack: false,
-  currentFavTrack: '',
-  favoriteTracks: [],
-};
-
 export default class Album extends Component {
   state = INICIAL_STATE;
 
