@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Loading from './Loading';
 import { getUser } from '../services/userAPI';
 import '../styles/header.css';
-import backArrow from '../imgs/chevron-left-solid.svg';
+// import backArrow from '../imgs/chevron-left-solid.svg';
 
 export default class Header extends Component {
   state = {
