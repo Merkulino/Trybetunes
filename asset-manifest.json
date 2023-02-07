@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Trybetubes/static/css/main.9fad39a9.css",
+    "main.js": "/Trybetubes/static/js/main.5ac202e3.js",
+    "static/js/787.6e984c9b.chunk.js": "/Trybetubes/static/js/787.6e984c9b.chunk.js",
+    "static/media/liked-songs-300.png": "/Trybetubes/static/media/liked-songs-300.5ebae1ae1a72170b226d.png",
+    "static/media/spotify_logo_white.png": "/Trybetubes/static/media/spotify_logo_white.f48fb565509bf23854a8.png",
+    "static/media/heart-64.svg": "/Trybetubes/static/media/heart-64.6295877420d676b604393836ff03dcc8.svg",
+    "index.html": "/Trybetubes/index.html",
+    "main.9fad39a9.css.map": "/Trybetubes/static/css/main.9fad39a9.css.map",
+    "main.5ac202e3.js.map": "/Trybetubes/static/js/main.5ac202e3.js.map",
+    "787.6e984c9b.chunk.js.map": "/Trybetubes/static/js/787.6e984c9b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9fad39a9.css",
+    "static/js/main.5ac202e3.js"
+  ]
+}
