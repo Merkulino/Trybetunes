@@ -2,7 +2,7 @@
   "name": "trybetunes",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://merkulino.github.io/Trybetubes",
+  "homepage": "https://merkulino.github.io/trybetubes",
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
