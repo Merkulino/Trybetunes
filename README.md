@@ -29,7 +29,7 @@ Como o tema do projeto foi Streaming de música, decidi trabalhar em uma **cópi
  - API
  - CRUD
 
-Caso queria testar a interface em seu dispositivo [clique aqui!](https://merkulino.github.io/Trybetubes/)
+Caso queria testar a interface em seu dispositivo [clique aqui!](https://trybetunes-prod.up.railway.app/)
 
 ### Como rodar 🚀
 
